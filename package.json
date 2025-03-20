@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
     "add": "^2.0.6",
     "button": "^1.1.1",
     "class-variance-authority": "^0.7.1",
@@ -25,11 +26,10 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.0.14",
     "aut": "^1.0.0",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.14",
-    "autoprefixer": "^10.4.21"
-
+    "tailwindcss": "^4.0.14"
   }
 }
