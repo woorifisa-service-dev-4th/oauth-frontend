@@ -1,7 +1,8 @@
 "use client";
-
+import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import "./globals.css"; // Tailwind CSS 스타일 파일을 가져옵니다
 
 export default function Layout({ children }) {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -29,12 +30,12 @@ export default function Layout({ children }) {
                     로그아웃
                 </button>
             ) : (
-                <button
+                <Button
                     onClick={() => router.push("/login")}
                     className="px-4 py-2 bg-green-500 rounded-md shadow-md"
                 >
                     로그인
-                </button>
+                </Button>
             )}
         </nav>
         <main className="p-6">{children}</main>
