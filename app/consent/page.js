@@ -8,13 +8,12 @@ export default function ConsentPage() {
   const [code, setCode] = useState("");
   const [checked, setChecked] = useState(false);
   const [clientSecret] = useState("secret123");
-  const [redirectUri, setRedirectUri] = useState("");
+  const [redirectUri] = useState("http://localhost:3000/oauth");
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const clientIdParam = urlParams.get("client_id");
     const codeParam = urlParams.get("code");
-    const codeRedirectUri = urlParams.get("redirect_url");
 
     if (!clientIdParam || !codeParam) {
       alert("잘못된 요청입니다.");
@@ -24,7 +23,6 @@ export default function ConsentPage() {
 
     setClientId(clientIdParam);
     setCode(codeParam);
-    setRedirectUri(codeRedirectUri);
   }, [router]);
 
   const handleConsent = async (isApproved) => {
