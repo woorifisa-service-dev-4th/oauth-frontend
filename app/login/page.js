@@ -9,7 +9,8 @@ export default function LoginPage() {
   const [error, setError] = useState(null);
   const router = useRouter();
 
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault(); // 👉 form 기본 동작 막기!!
     try {
       const response = await fetch("http://localhost:9000/api/auth/login", {
         method: "POST",
